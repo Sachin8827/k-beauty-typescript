@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h5 {
+  padding: 0;
+}
+#root {
+  position: relative;
+}
+.headerforhome {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.headerforother {
+  position: relative;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  /* background-color: var(--); */
+}
+.container {
+  margin: 0 auto;
+}
+
+.heading {
+  background-color: #ff9966;
+  color: white;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+.heading p {
+  text-align: center;
+}
+.head-img-icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+.empty {
+  width: 180px;
+}
+.head-img {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.head-img img {
+  width: 150px;
+}
+.head-icons {
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.head-icons a {
+  color: var(--content-color);
+}
+.nav-item {
+  padding-bottom: 1.4%;
+  border-bottom: 1px solid #e2e2e2;
+}
+.nav-item ul {
+  text-align: center;
+}
+.nav-item ul li {
+  padding: 1.1%;
+  display: inline;
+}
+.nav-item ul li:hover {
+  color: white;
+  border-bottom: 3px solid #ff9966;
+}
+.nav-item ul li:hover a {
+  color: white;
+}
+.nav-item ul li a {
+  font-size: 0.8rem;
+  color: #300c0c;
+  text-decoration: none;
+}
+.navs ul li a {
+  color: var(--content-color);
+}
+.navs ul li:hover a {
+  color: #ff9966;
+}
+button {
+  width: 11rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 11.12px 13.51px;
+  background-color: #ff9966;
+}
+.icons-for-home a {
+  color: black;
+}
+.badge {
+  color: black !important;
+}
+.badgeStyle {
+  position: absolute;
+  top: -15px;
+  left: 8px;
+  /* background-color:transparent; */
+  color: var(--content-color);
+  border-radius: 50%;
+  padding: 10px 10px;
+  font-size: 12px;
+}
+
+.insta {
+  border-color: var(--content-color);
+}

@@ -1,0 +1,23 @@
+.accordion {
+    /* background-color: #eee; */
+    /* color: #444; */
+    cursor: pointer;
+    margin-top: 1.2rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 0.9rem;
+    transition: 0.8s;
+    position: relative;
+  }
+  
+ 
+  
+  .panel {
+    width: 80%;
+    margin-top: 1rem;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }

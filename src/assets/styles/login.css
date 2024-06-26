@@ -1,0 +1,122 @@
+.login-section {
+  background-color: var(--background-color);
+}
+.login-form {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 25px;
+  color: var(--content-color);
+}
+.login-form p:nth-child(1) {
+  margin-top: 3rem;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 32px;
+}
+.login-form p:nth-child(2) {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13.39px;
+  letter-spacing: 1px;
+}
+.email {
+  margin-left: 1.2rem;
+  margin-top: 2rem;
+  width: 350px;
+  height: 40px;
+  padding-left: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 0;
+}
+
+.pass {
+  position: relative;
+  width: 350px;
+  height: 40px;
+  margin-left: 1.2rem;
+  margin-top: 2rem;
+}
+
+.password {
+  /* margin-left: 1.2rem;
+    margin-top: 2rem; */
+  width: 350px;
+  height: 40px;
+  padding-left: 0.5rem;
+  border: 1px solid grey;
+  border-radius: 0;
+}
+
+.forgot {
+  position: absolute;
+  top: 14px;
+  cursor: pointer;
+  right: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+/* .forgotPass{
+    color: red;
+    margin-left: 15rem;
+    
+} */
+.submitButton {
+  margin-left: 1.2rem;
+  margin-top: 2rem;
+  width: 350px;
+  height: 40px;
+  padding-left: 0.5rem;
+  border: none;
+  color: white;
+  background-color: #ff9966;
+  border-radius: 0;
+}
+.login-form p:nth-child(4) {
+  margin-top: 2rem;
+}
+.login-form p:nth-child(4) a {
+  color: var(--content-color);
+}
+
+.login-with-google-btn {
+  width: 350px;
+  margin-left: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 12px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 104px 11px;
+}
+.github-btn {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  border: none;
+  background-color: #fff;
+  width: 350px;
+  border-radius: 3px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-left: 1.2rem;
+  color: #757575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  /* padding: 12px 16px 12px 42px; */
+  margin-bottom: 15px;
+}

@@ -1,0 +1,34 @@
+:root {
+  --content-box-bg-color: #f7f7f9;
+  --content-color: black;
+  --background-color: white;
+  --bg-color-for-blog: #f7f7f9;
+  --card-background-color: #f7f7f9;
+  --tradmark-bg-color: #efeff0;
+  --nav-item-color: #300c0c;
+  --shadow-for-invoice: 0 0 10px rgba(0, 0, 0, 0.15);
+  --toastify-icon-color-success: #ff9966 !important;
+  --toastify-color-progress-success: #ff9966 !important;
+}
+body {
+  font-family: "Questrial", sans-serif;
+  /* background-color: var(--background-color); */
+}
+input:not([type="submit"]):focus-visible {
+  outline-width: 0px;
+  border: 1px solid #ff9966;
+}
+.dark {
+  --background-color: #121212;
+  --content-box-bg-color: #121212;
+  --content-color: #e1e1e1;
+  --bg-color-for-blog: #292929;
+  --card-background-color: #555555;
+  --tradmark-bg-color: #292929;
+  --nav-item-color: #e1e1e1;
+  --shadow-for-invoice: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+#root {
+  background-color: var(--background-color);
+  color: var(--content-color);
+}
