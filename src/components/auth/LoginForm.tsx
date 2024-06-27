@@ -7,12 +7,13 @@ import {
   getAuth,
   GithubAuthProvider,
 } from "firebase/auth";
-import { validateEmail } from "../../Validations/Validations";
 import { setUser } from "../../Redux/UserSlice";
 import { app } from "../../firebaseConfig";
-import useLocalStorage from "../../CustomHooks/useLocalStorage";
 import { findByEmail } from "../Common/CommanFunctions";
-import { User, loginFormValues } from "../../Types/Types";
+import { loginFormValues } from "../../Types/Types";
+import { validationSchema } from "../../Validations/SchemaValidations";
+import { toast } from "react-toastify";
+import useLocalStorage from "../../CustomHooks/useLocalStorage";
 import "../../assets/styles/login.css";
 const LoginForm: React.FC = () => {
   const navigate = useNavigate();
@@ -21,20 +22,19 @@ const LoginForm: React.FC = () => {
   const provider = new GoogleAuthProvider();
   const gitHub = new GithubAuthProvider();
   const { get } = useLocalStorage("users");
-
+  const currentValidationStep = validationSchema[0]
   const handleSubmit = (values: loginFormValues) => {
     // Your form submission logic here
     try {
       const data = get();
       const status = findByEmail(data, values.email);
-      console.log(status);
       if (status) {
         if (status.password == values.password) {
           dispatch(setUser(status));
           navigate("/home");
-        } else alert("Wrong Password");
+        } else toast.error("Wrong Password");
       } else {
-        alert("user not found.. kindly please signup");
+        toast.error("user not found.. kindly please signup");
       }
       // setSubmitting();
     } catch (error) {
@@ -48,7 +48,6 @@ const LoginForm: React.FC = () => {
       setData(response);
     } catch (error) {
       console.log(error);
-      console.log("error occured");
     }
   };
   const handleGithub = async () => {
@@ -83,14 +82,10 @@ const LoginForm: React.FC = () => {
             <p>Please enter your email and password</p>
             <Formik
               initialValues={{ email: "", password: "" }}
-              validate={(values) => {
-                const errors = {};
-                validateEmail(values, errors); // Ensure validateEmail function works correctly
-                return errors;
-              }}
+              validationSchema={currentValidationStep}
               onSubmit={handleSubmit}
             >
-              {({ isSubmitting }) => (
+              {() => (
                 <Form >
                   <Field
                     type='email'
@@ -101,7 +96,7 @@ const LoginForm: React.FC = () => {
                   <ErrorMessage
                     name='email'
                     component='div'
-                    className='errormsg'
+                    className='error'
                   />
 
                   <div className='pass'>
@@ -114,7 +109,7 @@ const LoginForm: React.FC = () => {
                     <ErrorMessage
                       name='password'
                       component='span'
-                      className='errormsg1'
+                      className='error'
                     />
 
                     <div className='forgot'>Forgot Password?</div>

@@ -1,10 +1,9 @@
-import "../assets/styles/Cart.css";
 import { useDispatch } from "react-redux";
-import { updateQuantity, removeCartItem, setNullProduct } from "../Redux/UserSlice";
 import { useNavigate } from "react-router-dom";
-
+import { updateQuantity, removeCartItem, setNullProduct } from "../Redux/UserSlice";
 import { calculatePrice } from '../components/Common/CommanFunctions'
 import { AddToCartProp } from "../Types/Types";
+import "../assets/styles/Cart.css";
 
 
 const AddToCart: React.FC<AddToCartProp> = ({ isCartOpen, handleCart, cart }) => {

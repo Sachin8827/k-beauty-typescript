@@ -36,7 +36,7 @@ const SignupForm: React.FC<SignUpForm> = ({ currentPage, setCurrentPage, FormTit
     } else if (currentPage === 1) {
       return <Names firstName={firstName} lastName={lastName} />;
     } else if (currentPage === 2) {
-      return <Place street={street} />;
+      return <Place street={street} city={city} />;
     }
   };
 

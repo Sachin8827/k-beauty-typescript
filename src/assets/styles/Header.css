@@ -26,6 +26,8 @@ h5 {
 }
 .container {
   margin: 0 auto;
+  --c-w: 1320px;
+  max-width: var(--c-w);
 }
 
 .heading {

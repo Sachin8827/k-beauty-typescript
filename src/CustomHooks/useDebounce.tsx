@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Debounce } from "../Types/Types";
 
-function useDebounce(value, delay) {
-    const [debouncedValue, setDebouncedValue] = useState(value);
+const useDebounce = ({ value, delay }: Debounce) => {
+    const [debouncedValue, setDebouncedValue] = useState<string>(value);
     useEffect(() => {
         const timeoutID = setTimeout(() => {
             setDebouncedValue(value);

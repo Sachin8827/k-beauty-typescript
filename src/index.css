@@ -32,3 +32,6 @@ input:not([type="submit"]):focus-visible {
   background-color: var(--background-color);
   color: var(--content-color);
 }
+.Toastify__close-button {
+  width: auto;
+}

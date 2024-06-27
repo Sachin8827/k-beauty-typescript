@@ -24,14 +24,18 @@ const userSlice = createSlice({
     //   state.cart = state;
     // },
     addToCart: (state, action : {payload:Cart}) => {
-      const existingItem = state.user.cart?.find(
+      if(!state.user.cart){
+        state.user.cart = []
+      }
+
+      const existingItem = state.user.cart.find(
         (item) => item.product.id === action.payload.product.id
       );
       if (existingItem) {
         existingItem.quantity += action.payload.quantity;
         state.cartMessage = `Item added`;
       } else {
-        state.user.cart?.push({
+        state.user.cart.push({
           product: action.payload.product,
           quantity: action.payload.quantity,
         });
@@ -39,14 +43,17 @@ const userSlice = createSlice({
       }
     },
     updateQuantity(state, action: PayloadAction<{ id: number; num: number }>) {
-      const item = state.cart?.find(
-        (item) => item.product.id === action.payload.id
-      );
-      if (item) {
-        if (action.payload.num > 0) {
-          item.quantity += action.payload.num;
-        } else if (item.quantity > 1) {
-          item.quantity += action.payload.num; // Assuming num is negative for decrement
+    
+      if(state.user.cart){
+        const item = state.user.cart.find(
+          (item) => item.product.id === action.payload.id
+        );
+        if (item) {
+          if (action.payload.num == 0) {
+            item.quantity += 1;
+          } else if (item.quantity > 1) {
+            item.quantity -= 1; // Assuming num is negative for decrement
+          }
         }
       }
     },

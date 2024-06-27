@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import Rating from "../Common/Rating";
-import "../assets/styles/Products.css";
+import "../../assets/styles/Products.css";
 import { ProductProp } from "../../Types/Types";
-const Products: React.FC<ProductProp> = ({ data, heading }) => {
+
+const Products: React.FC<ProductProp> = ({ data: products, heading }) => {
 
   return (
     <>
@@ -13,7 +14,7 @@ const Products: React.FC<ProductProp> = ({ data, heading }) => {
               <h4>{heading ? heading : "BEST SELLERS"}</h4>
             </div>
             <div className='product-list'>
-              {data.map((product, index) => (
+              {products.map((product, index) => (
                 <Link to={`/productdetail/${product.id}`} key={index} className='card'>
                   <div >
                     <div className='product-img'>

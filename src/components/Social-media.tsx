@@ -1,7 +1,6 @@
-import data from '../utils/constant/data'
-import { useState, useEffect } from 'react'
+import data from '../utils/constants/data'
 import '../assets/styles/Social-media.css'
-function SocialMedia() {
+const SocialMedia: React.FC = () => {
     return <>
         <section>
             <div className="container">
@@ -10,7 +9,7 @@ function SocialMedia() {
                     <h5>@KBEAUTYARABIA</h5>
                     <div className="social-media-container">
                         {data.map((product, index) => <div className="social-media-card" key={index}>
-                            <img src={'images/'+product.image} />
+                            <img src={'images/' + product.image} />
                             <div className='overlay'>
                                 <i
                                     className='fa-brands fa-instagram'

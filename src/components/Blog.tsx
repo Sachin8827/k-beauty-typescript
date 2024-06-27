@@ -1,6 +1,6 @@
+import testimonials from '../utils/constants/testmonialData'
 import "../assets/styles/Blog.css";
-import testimonials from '../utils/constant/testmonialData'
-function Blog() {
+const Blog: React.FC = () => {
 
   return (
     <>
@@ -12,7 +12,7 @@ function Blog() {
             <div className="testimonials">
               {testimonials.map((item, index) => <div className="blog-card" key={index}>
                 <div className="blog-img">
-                  <img src={'images/'+item.image} />
+                  <img src={'images/' + item.image} />
                 </div>
                 <div className="blog-content">
                   <h6>{item.heading}</h6>

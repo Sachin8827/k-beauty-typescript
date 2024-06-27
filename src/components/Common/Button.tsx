@@ -1,6 +1,6 @@
-import React from "react";
+import * as React from "react";
 
-function Button({ className, text }) {
+const Button: React.FC<{ className: string, text: string }> = ({ className, text }) => {
   return (
     <input
       type="submit"

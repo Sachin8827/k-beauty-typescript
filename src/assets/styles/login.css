@@ -24,11 +24,10 @@
   letter-spacing: 1px;
 }
 .email {
-  margin-left: 1.2rem;
   margin-top: 2rem;
   width: 350px;
-  height: 40px;
   padding-left: 0.5rem;
+  height: 40px;
   border: 1px solid grey;
   border-radius: 0;
 }
@@ -36,19 +35,15 @@
 .pass {
   position: relative;
   width: 350px;
-  height: 40px;
-  margin-left: 1.2rem;
   margin-top: 2rem;
 }
 
 .password {
-  /* margin-left: 1.2rem;
-    margin-top: 2rem; */
   width: 350px;
   height: 40px;
-  padding-left: 0.5rem;
   border: 1px solid grey;
   border-radius: 0;
+  padding-left: 0.5rem;
 }
 
 .forgot {
@@ -65,13 +60,11 @@
     
 } */
 .submitButton {
-  margin-left: 1.2rem;
-  margin-top: 2rem;
   width: 350px;
   height: 40px;
-  padding-left: 0.5rem;
   border: none;
   color: white;
+  margin-top: 2rem;
   background-color: #ff9966;
   border-radius: 0;
 }
@@ -84,7 +77,6 @@
 
 .login-with-google-btn {
   width: 350px;
-  margin-left: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -110,7 +102,6 @@
   border-radius: 3px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  margin-left: 1.2rem;
   color: #757575;
   display: flex;
   justify-content: center;

@@ -82,7 +82,7 @@
   margin-top: 2rem;
   width: 350px;
   height: 40px;
-  padding-left: 0.5rem;
+  text-align: center;
   border: none;
   color: white;
   background-color: #ff9966;
@@ -116,7 +116,6 @@
 }
 
 .form-at-smallscreen {
-  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;

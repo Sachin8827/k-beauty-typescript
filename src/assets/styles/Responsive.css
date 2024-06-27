@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1440px) {
   .container {
     max-width: 1320px;
-    margin: 0 3%;
+    margin: 0 auto;
   }
 
   .viewAllProduct {
@@ -210,7 +210,7 @@
     font-size: 0.8rem;
   }
   .details p:nth-child(2) {
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
   }
   .order-div {
     flex-direction: column;
@@ -298,6 +298,13 @@
   }
   .details {
     width: 100%;
+    margin-top: 5rem;
+  }
+  .slick-dots li:nth-child(2) {
+    margin-top: 20px;
+  }
+  .slick-dots li:nth-child(3) {
+    margin-top: 20px;
   }
   .forSwap {
     width: 60%;

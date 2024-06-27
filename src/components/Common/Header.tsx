@@ -3,18 +3,18 @@ import { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { logOut } from '../../Redux/UserSlice'
 import { ThemeContext } from "../../App";
-import AddToCart from '../AddToCart';
-import logo from "/images/logo.png";
-import "../../assets/styles/Cart.css";
-import "../../assets/styles/Header.css";
 import { toast } from 'react-toastify';
 import { HeaderProp } from '../../Types/Types';
 import { RootState } from '../../Redux/Store';
+import AddToCart from '../AddToCart';
+import logo from "/images/logo.png";
 import LogoutModal from '../LogoutModal';
+import "../../assets/styles/Header.css";
+import "../../assets/styles/Cart.css";
 const Header: React.FC<HeaderProp> = ({ handleInputField }) => {
   const location = useLocation();
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { user, isLoggedIn } = useSelector((state: RootState) => state.user);
+  const { user, isLoggedIn, cart } = useSelector((state: RootState) => state.user);
   const { isDark, toggleMode } = useContext(ThemeContext);
   const [showModal, setShowModal] = useState(false);
   const isHome = location.pathname === "/home" || location.pathname === "/";
@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProp> = ({ handleInputField }) => {
               <a href='#' onClick={toggleMode}>
                 <i className={!isDark ? 'fa fa-moon-o' : 'fa-solid fa-sun'}></i>
               </a>
-              <a onClick={handleCart} style={{ position: 'relative', display: 'inline-block' }}>
+              <a onClick={handleCart} style={{ position: 'relative', display: 'inline-block', cursor: 'pointer' }}>
                 <i className='fa-solid fa-bucket'></i>
                 <span className={`badgeStyle ${isHome ? "badge" : ""}`}>{user?.cart?.length}</span>
               </a>
@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProp> = ({ handleInputField }) => {
           </nav>
         </div>
       </header>
-      <AddToCart handleCart={handleCart} isCartOpen={isCartOpen} cart={user.cart} />
+      <AddToCart handleCart={handleCart} isCartOpen={isCartOpen} cart={user.cart || []} />
       <LogoutModal
         isOpen={showModal}
         onClose={handleCloseModal}

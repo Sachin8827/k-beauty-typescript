@@ -1,6 +1,6 @@
 import * as React from "react";
-import '../assets/styles/Modal.css'
 import { LogoutProp } from "../Types/Types";
+import '../assets/styles/Modal.css'
 const LogoutModal: React.FC<LogoutProp> = ({ isOpen, onClose, onConfirm }) => {
     return (
         <div className="container">

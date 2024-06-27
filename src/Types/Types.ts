@@ -1,5 +1,4 @@
 import * as React from "react"
-
 export interface User {
     email:string,
     password : string,
@@ -30,7 +29,7 @@ export interface UserState{
     user : User,
     isLoggedIn : boolean,
     cartMessage  : string | undefined,
-    buyNowProduct : object | undefined,
+    buyNowProduct : Cart | undefined,
     cart? : Cart[]
 }
 export interface RouteProp {
@@ -42,7 +41,7 @@ export type HeaderProp = {
 }
 export type ThemeContextType = {isDark : boolean, toggleMode :() => void}
 
-export type AddToCartProp ={
+export interface AddToCartProp {
     isCartOpen : boolean,
     handleCart : () =>void,
     cart : Cart[]
@@ -68,5 +67,26 @@ export interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElem
 export type ProductProp ={
     data : Product[], 
     heading? :string
+}
+export interface Debounce{
+    value :string,
+    delay  :number
+}
+export interface ContentProps {
+    heading  :string,
+    subHeading : string,
+    text : string,
+    buttonValue : string
+}
+export interface ImageProp {
+    image : string | null
+}
+export interface SummaryProp{
+    user : User,
+    buyNowProduct  :Cart | undefined
+}
+export interface Address{
+    street : string,
+    city : string
 }
 export const userObject = {email: '', password : '', firstName :'', lastName : '', city : '', street : '', cart : []}
