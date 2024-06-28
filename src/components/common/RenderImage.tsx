@@ -1,5 +1,7 @@
+import { RenderImageProp } from "../../Types/Types";
 
-function RenderImage({ classOfDiv, classOfImage, imageName }) {
+
+const RenderImage: React.FC<RenderImageProp> = ({ classOfDiv, classOfImage, imageName }) => {
   return (
     <>
       <div className={classOfDiv}>
@@ -8,7 +10,7 @@ function RenderImage({ classOfDiv, classOfImage, imageName }) {
           <div className='overlay'>
             <i
               className='fa-brands fa-instagram'
-              style={{ color: "white", zIndex:1, fontSize : "1.2rem"}}
+              style={{ color: "white", zIndex: 1, fontSize: "1.2rem" }}
             ></i>
           </div>
         ) : (

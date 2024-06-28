@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useContext, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { logOut } from '../../Redux/UserSlice'
 import { ThemeContext } from "../../App";
 import { toast } from 'react-toastify';
@@ -14,17 +14,18 @@ import "../../assets/styles/Cart.css";
 const Header: React.FC<HeaderProp> = ({ handleInputField }) => {
   const location = useLocation();
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { user, isLoggedIn, cart } = useSelector((state: RootState) => state.user);
+  const { user, isLoggedIn } = useSelector((state: RootState) => state.user);
   const { isDark, toggleMode } = useContext(ThemeContext);
   const [showModal, setShowModal] = useState(false);
   const isHome = location.pathname === "/home" || location.pathname === "/";
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const handleCart = () => {
-    isLoggedIn ? setIsCartOpen(!isCartOpen) : toast.success("please Login first")
+    isLoggedIn ? setIsCartOpen(!isCartOpen) : toast.success("Please Login First")
   };
   const handleCloseModal = () => setShowModal(false);
   const handleConfirmLogout = () => {
-    dispatch(logOut(1)); // Example: Dispatch logout action
+    dispatch(logOut(1));
     setShowModal(false);
   };
   const handleLogout = () => {
@@ -32,7 +33,7 @@ const Header: React.FC<HeaderProp> = ({ handleInputField }) => {
       setShowModal(true);
     }
     else {
-      toast.success("You are not logged in")
+      navigate('/login')
     }
   }
 
@@ -49,13 +50,15 @@ const Header: React.FC<HeaderProp> = ({ handleInputField }) => {
           </div>
           <div className='head-img-icons'>
             <div className='empty'></div>
-            <div className='head-img'>
-              <img src={logo} alt='Logo' />
+
+            <div className='head-img' >
+              <Link to={"/"}> <img src={logo} alt='Logo' /></Link>
             </div>
             <div className={`head-icons ${isHome ? "icons-for-home" : ""}`} >
-              <a href='#' onClick={handleLogout}>
-                <i className='fa-regular fa-user'></i>
-              </a>
+              <Link to={''} onClick={handleLogout}>
+                <i className='fa-regular fa-user' onClick={handleLogout}></i>
+              </Link>
+
               <a href='#' onClick={handleInputField}>
                 <i className='fa-solid fa-magnifying-glass'></i>
               </a>
@@ -72,16 +75,16 @@ const Header: React.FC<HeaderProp> = ({ handleInputField }) => {
             <div className={`nav-item ${isHome ? "" : "navs"}`}>
               <ul>
                 <li>
-                  <a href='#'>SHOP ALL</a>
+                  <Link to={'/'}>SHOP ALL</Link>
                 </li>
                 <li>
-                  <a href='#'>NEW</a>
+                  <Link to={'/'}>NEW</Link>
                 </li>
                 <li>
-                  <a href='#'>BRANDS</a>
+                  <Link to={'/'}>BRANDS</Link>
                 </li>
                 <li>
-                  <a href='#'>VALUE SETS</a>
+                  <Link to={'/'}>VALUE SETS</Link>
                 </li>
                 <li>
                   <a href='#'>BLOG</a>

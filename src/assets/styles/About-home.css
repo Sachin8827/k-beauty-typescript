@@ -10,22 +10,27 @@
 .about-content .row:nth-child(2) {
   flex-direction: row-reverse;
 }
+.about-content .row:nth-child(2) .content-box {
+  justify-content: start;
+  padding-left: 52px;
+}
 .content-box {
   width: 50%;
   background-color: var(--bg-color-for-blog);
-  padding-top: 9%;
+  padding-top: 5%;
   padding-bottom: 0;
   display: flex;
   justify-content: end;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: var(--content-color);
 }
 .content {
-  width: calc(var(--c-w) / 2);
+  width: calc(720px / 2);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 50px;
 }
 .content h6 {
   padding-bottom: 2%;

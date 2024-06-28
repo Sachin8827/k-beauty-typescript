@@ -8,12 +8,12 @@ import { addToCart, buyNow } from "../../Redux/UserSlice";
 import { useSelector } from "react-redux";
 import { Product } from "../../Types/Types";
 import { RootState } from "../../Redux/Store";
-import SimpleSlider from "../Common/Slider";
-import RenderImage from "../Common/RenderImage";
+import SimpleSlider from "../common/Slider";
+import RenderImage from "../common/RenderImage";
 import productImage from "../../utils/constants/ProductImage";
-import Rating from "../../components/Common/Rating";
+import Rating from "../common/Rating";
 import delivery from "/images/delivery.png";
-import Accordion from "../Common/Accordion";
+import Accordion from "../common/Accordion";
 import accordionData from "../../utils/constants/AccordianData";
 import data from "../../utils/constants/data";
 
@@ -53,16 +53,18 @@ const ProductDetail: React.FC<{ id: number }> = ({ id }) => {
   };
 
   const handleBuyNow = (product: Product) => {
+    dispatch(buyNow({ product, quantity }));
     if (typeof user.street === "undefined") {
+
       navigate('/address')
     } else {
-      dispatch(buyNow({ product, quantity }));
+
       navigate("/summary");
     }
   };
 
   if (loading) {
-    return <div style={{ display: "flex", justifyContent: 'center' }}><CircleLoader color="#ff9966"
+    return <div style={{ display: "flex", justifyContent: 'center', width: "100%", height: '30rem', alignItems: 'center' }}><CircleLoader color="#ff9966"
       size={100} /></div>;
   }
 
@@ -117,6 +119,7 @@ const ProductDetail: React.FC<{ id: number }> = ({ id }) => {
                   border: "none",
                   backgroundColor: "transparent",
                   color: "var(--content-color)",
+                  MozAppearance: "textfield"
                 }}
               />
               <i
@@ -135,7 +138,7 @@ const ProductDetail: React.FC<{ id: number }> = ({ id }) => {
               </p>
             </div>
             <div className='buy-now' onClick={() => product && handleBuyNow(product)}>
-              <p>BUY IT NOW</p>
+              <button>BUY IT NOW</button>
             </div>
             <i className='fa-regular fa-heart'></i>
             <span>ADD TO WISHLIST</span>

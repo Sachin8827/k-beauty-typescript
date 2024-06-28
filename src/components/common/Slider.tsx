@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { ImageProp } from "../../Types/Types";
-import RenderImage from "../Common/RenderImage";
+import RenderImage from "./RenderImage";
 
 const SimpleSlider: React.FC<{ data: ImageProp[] }> = ({ data }) => {
   const settings = {

@@ -7,5 +7,5 @@ export const ProtectedRoute: React.FC<RouteProp> = ({ children, isLoggedIn }) =>
 }
 export const PublicRoute: React.FC<RouteProp> = ({ children, isLoggedIn }) => {
 
-    return !isLoggedIn ? <>{children}</> : <Navigate to={'/home'} />
+    return !isLoggedIn ? <>{children}</> : <Navigate to={'/'} />
 }

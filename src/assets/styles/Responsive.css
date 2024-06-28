@@ -1,9 +1,10 @@
-@media only screen and (max-width: 1440px) {
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-  }
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
+@media only screen and (max-width: 1440px) {
   .viewAllProduct {
     max-width: 100%;
     font-size: 12.8px;
@@ -40,12 +41,9 @@
     --number-of-cards: 4;
   }
 }
-
+@media only screen and (max-width: 1200px) {
+}
 @media only screen and (max-width: 991px) {
-  .container {
-    max-width: 960px;
-    margin: 0 3%;
-  }
   .product-list {
     --cards-per-row: 3;
     gap: 20px;
@@ -65,11 +63,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
-    max-width: 720px;
-    margin: 0 5%;
+  .content {
+    width: 100%;
   }
-
   .about-home {
     margin-top: 20px;
 
@@ -101,6 +97,7 @@
   }
   .content {
     margin-top: 20px;
+    padding-right: 10px;
   }
   .content h6 {
     font-size: 0.8rem;
@@ -152,10 +149,11 @@
     height: auto;
   }
   .cart-summary {
-    width: 58%;
+    width: 100%;
   }
   .order-summary {
-    width: 39%;
+    width: 100%;
+    margin-top: 20px;
   }
   .placeSection {
     width: 100%;
@@ -176,17 +174,25 @@
     width: 100%;
   }
   .belowSmallScreen {
-    width: 100%;
+    width: 11rem;
   }
   .invoice-box {
     font-size: 0.8rem;
   }
+  .search-container {
+    /* position: absolute; */
+    top: 10rem;
+  }
+  .order-div {
+    flex-direction: column;
+  }
+  .about-content .row:nth-child(2) .content-box {
+    justify-content: start;
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width: 666px) {
-  .container {
-    max-width: 645px;
-  }
   .pro-heading {
     padding-bottom: 17px;
   }
@@ -240,9 +246,6 @@
 }
 
 @media only screen and (max-width: 575px) {
-  .container {
-    max-width: 540px;
-  }
   .product-list {
     --cards-per-row: 2;
     gap: 15;
@@ -297,7 +300,7 @@
     width: calc(100% / var(--number-of-cards) - 15px);
   }
   .details {
-    width: 100%;
+    width: 80%;
     margin-top: 5rem;
   }
   .slick-dots li:nth-child(2) {
@@ -313,9 +316,6 @@
 }
 
 @media only screen and (max-width: 425px) {
-  .container {
-    max-width: 400px;
-  }
   .login-form {
     width: 100%;
     display: block;
@@ -423,7 +423,7 @@
   }
   .search-container {
     position: absolute;
-    top: 25%;
+    top: 35%;
     width: 55%;
   }
   .input-field {
@@ -522,5 +522,46 @@
 @media only screen and (max-width: 350px) {
   .cart {
     width: 100%;
+  }
+  .belowSmallScreen {
+    width: 50%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .content {
+    width: calc(960px / 2);
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .content {
+    width: calc(1140px / 2);
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  .content {
+    width: calc(1320px / 2);
   }
 }

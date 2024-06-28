@@ -1,8 +1,8 @@
 import * as Yup from 'yup'
 export const validationSchema =[
     Yup.object().shape({
-        email  : Yup.string().required("email is required").matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, "Invalid email address"),
-        password : Yup.string().required("Password is empty").min(8, "length should be more than 8").matches(/[!@#$%^&*(),.?":{}|<>]/, 'Password must contain at least one special character')
+        email  : Yup.string().required("Email is required").matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, "Invalid email address"),
+        password : Yup.string().required("Password is empty").min(8, "Length should be more than 8").matches(/[!@#$%^&*(),.?":{}|<>]/, 'Password must contain at least one special character')
     }),
     Yup.object().shape({
         firstName : Yup.string().required('First name is required').matches(/^[a-zA-Z' -]+$/, "Only letters are allowed"),

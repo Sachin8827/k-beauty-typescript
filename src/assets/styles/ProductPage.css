@@ -1,5 +1,5 @@
 .product-row {
-  width: 90%;
+  width: 100%;
   margin-top: 2rem;
   display: flex;
   justify-content: space-around;
@@ -14,8 +14,13 @@
   image-rendering: pixelated;
 }
 .forSwap {
-  width: 40%;
+  width: 45%;
+
+  height: fit-content;
 }
+/* .forSwap img:nth-child(1) {
+  border: 1px solid grey;
+} */
 .details {
   width: 31%;
   height: auto;
@@ -44,6 +49,7 @@
   image-rendering: pixelated;
   height: 100%;
   object-fit: contain;
+  border: 1px solid #e2e2e2;
 }
 .details {
   margin-top: 3rem;
@@ -156,7 +162,7 @@
   list-style: none;
   text-align: center;
   flex-direction: column;
-  left: -42%;
+  left: -32%;
   width: 22% !important;
 }
 .slick-dots li {
@@ -188,6 +194,7 @@
   background-color: #ff9966;
   border: none;
   color: white;
+  cursor: pointer;
 }
 @media only screen and (max-width: 425px) {
   .text-add {

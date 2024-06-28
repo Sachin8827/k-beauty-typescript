@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { useSelector } from "react-redux";
 import { Cart, User } from "../Types/Types";
 import { RootState } from "../Redux/Store";
-import { calculatePrice } from "../components/Common/CommanFunctions";
+import { calculatePrice } from "../components/common/CommanFunctions";
 import GenerateInvoice from "../components/GenerateInvoice";
 import logo from '/images/logo.png'
 import "../assets/styles/Invoice.css";

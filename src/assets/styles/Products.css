@@ -1,117 +1,107 @@
-.pro-heading{
-    padding-top: 3%;
-    text-align: center;
-    color: var(--content-color);
+.pro-heading {
+  padding-top: 3%;
+  text-align: center;
+  color: var(--content-color);
 }
-.pro-heading h4{
-    
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0.5px;
+.pro-heading h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.5px;
 }
-.products{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--background-color);
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
 }
-.product-list{
-    --cards-per-row: 4; 
-    width: 100%;
-    display: flex;
-    padding-top: 3%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-
-.card{
-    width: calc(100% / var(--cards-per-row) - 20px); 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.product-img{
-    width: 100%;
-    background-color: var(--card-background-color);
-    aspect-ratio: 0.8;
-    padding: 17px;
-    image-rendering: pixelated
-}
-.product-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    
-}
-.product-content{
-    padding-top: 7%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--content-color);
-    white-space: nowrap; /* Prevents wrapping onto a new line */
-    overflow: hidden; /* Ensures overflow content is hidden */
-    text-overflow: ellipsis;
-}
-.product-content h6{
-    font-size: 0.6rem;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.75px;
-    text-align: left;
-}
-.rating{
-    padding-top: 3%;
-}
-.price{
-    padding-top: 3%;
-    padding-bottom: 5%;
-}
-a{
-    text-decoration: none;
-    color: var(--content-color);
-}
-.product-list a:hover .product-content h6{
-    color: #FF9966;
-}
-.viewAllProduct{
-    max-width: 100%;
-    text-align: center;
-    padding-top: 5%;
-    width: 11rem;
-    margin-bottom: 30px;
+.product-list {
+  --cards-per-row: 4;
+  width: 100%;
+  display: flex;
+  padding-top: 3%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-  @media only screen and (max-width: 575px) {
-    .container{
-      max-width: 540px;
-     
-    }
-    .product-list{
-        --cards-per-row: 2; 
-        gap: 15;
-    }
-    .card{
-        width: calc(100% / var(--cards-per-row) - 15px);    
-    }
+.card {
+  width: calc(100% / var(--cards-per-row) - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-img {
+  width: 100%;
+  background-color: var(--card-background-color);
+  aspect-ratio: 0.8;
+  padding: 17px;
+  image-rendering: pixelated;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-content {
+  padding-top: 7%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--content-color);
+  white-space: nowrap; /* Prevents wrapping onto a new line */
+  overflow: hidden; /* Ensures overflow content is hidden */
+  text-overflow: ellipsis;
+}
+.product-content h6 {
+  font-size: 0.6rem;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.75px;
+  text-align: left;
+}
+.rating {
+  padding-top: 3%;
+}
+.price {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+a {
+  text-decoration: none;
+  color: var(--content-color);
+}
+.product-list a:hover .product-content h6 {
+  color: #ff9966;
+}
+.viewAllProduct {
+  max-width: 100%;
+  text-align: center;
+  padding-top: 5%;
+  width: 11rem;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .card {
+    width: calc(100% / var(--cards-per-row) - 15px);
   }
-  @media only screen and (max-width: 375px) {
-    .container{
-      max-width: 100%;
-    }
-    .product-list{
-        --cards-per-row: 1;
-        gap: 0;
-    }
-    .card{
-        width: calc(100% / var(--cards-per-row));    
-    }
+}
+@media only screen and (max-width: 575px) {
+  .product-list {
+    --cards-per-row: 2;
+    gap: 15;
   }
-  
-  
-  
-  
+  .card {
+    width: calc(100% / var(--cards-per-row) - 15px);
+  }
+}
+@media only screen and (max-width: 375px) {
+  .product-list {
+    --cards-per-row: 1;
+    gap: 0;
+  }
+  .card {
+    width: calc(100% / var(--cards-per-row));
+  }
+}

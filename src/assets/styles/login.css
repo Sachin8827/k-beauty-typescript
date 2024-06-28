@@ -3,8 +3,9 @@
 }
 .login-form {
   display: flex;
-
   flex-direction: column;
+  width: 350px;
+  margin: 0 auto;
   align-items: center;
   position: relative;
   margin-bottom: 25px;
@@ -25,25 +26,25 @@
 }
 .email {
   margin-top: 2rem;
-  width: 350px;
+  width: 100%;
   padding-left: 0.5rem;
-  height: 40px;
+  padding: 12px;
   border: 1px solid grey;
   border-radius: 0;
 }
 
 .pass {
   position: relative;
-  width: 350px;
+  width: 100%;
   margin-top: 2rem;
 }
 
 .password {
-  width: 350px;
-  height: 40px;
+  width: 100%;
   border: 1px solid grey;
   border-radius: 0;
   padding-left: 0.5rem;
+  padding: 12px;
 }
 
 .forgot {

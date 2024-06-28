@@ -1,7 +1,7 @@
 import Blog from "../components/Blog";
-import AboutHome from "../components/Common/About-Home";
+import AboutHome from "../components/common/About-Home";
 import HeroSection from "../components/HeroSection";
-import Products from "../components/Product/Products";
+import Products from "../components/product/Products";
 import SocialMedia from "../components/Social-media";
 import data from "../utils/constants/data";
 const HomePage: React.FC<{ inputFieldStatus: boolean }> = ({ inputFieldStatus }) => {

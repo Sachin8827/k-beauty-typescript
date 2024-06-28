@@ -89,4 +89,10 @@ export interface Address{
     street : string,
     city : string
 }
+
+export interface RenderImageProp {
+    classOfDiv: string,
+    classOfImage: string,
+    imageName: string
+  }
 export const userObject = {email: '', password : '', firstName :'', lastName : '', city : '', street : '', cart : []}

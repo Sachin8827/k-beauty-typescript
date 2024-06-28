@@ -1,6 +1,6 @@
 import * as React from "react";
 import '../../assets/styles/Signup.css'
-import { InputField } from "../Common/FormInputGroup";
+import { InputField } from "../common/FormInputGroup";
 
 export const Names: React.FC<{ firstName: string, lastName: string }> = ({ firstName, lastName }) => {
   return <>

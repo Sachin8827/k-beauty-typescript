@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateQuantity, removeCartItem, setNullProduct } from "../Redux/UserSlice";
-import { calculatePrice } from '../components/Common/CommanFunctions'
+import { calculatePrice } from './common/CommanFunctions'
 import { AddToCartProp } from "../Types/Types";
 import "../assets/styles/Cart.css";
 

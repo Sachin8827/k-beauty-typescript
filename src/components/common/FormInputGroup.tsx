@@ -4,6 +4,7 @@ import { InputFieldProps } from "../../Types/Types";
 import '../../assets/styles/Signup.css'
 export const InputField: React.FC<InputFieldProps> = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props)
+  console.log(field)
   return <>
     <div className="col">
       <label htmlFor="input" className="form-label">

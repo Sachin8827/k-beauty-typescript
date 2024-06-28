@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { calculatePrice } from '../components/Common/CommanFunctions'
+import { calculatePrice } from './common/CommanFunctions'
 import { RootState } from '../Redux/Store'
 import { User } from '../Types/Types'
 import logo from '../../public/images/logo.png'

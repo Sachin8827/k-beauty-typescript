@@ -1,14 +1,14 @@
 import { toast } from "react-toastify";
 import { Form, Formik } from "formik";
 import { useNavigate } from "react-router-dom";
-import { validationSchema } from "../../Validations/SchemaValidations";
+import { validationSchema } from "../../validations/SchemaValidations";
 import { EmailPassword } from "../auth/Signup";
 import { Names } from "../auth/PersonalInfo";
-import { findByEmail } from "../Common/CommanFunctions";
+import { findByEmail } from "../common/CommanFunctions";
 import { Place } from "../auth/Address";
-import Button from "./../Common/Button";
-import useLocalStorage from "../../CustomHooks/useLocalStorage";
-import ProgressBar from "../Common/ProgressBar";
+import Button from "../common/Button";
+import useLocalStorage from "../../customHooks/useLocalStorage";
+import ProgressBar from "../common/ProgressBar";
 import "../../assets/styles/Signup.css";
 import { SignUpForm, User } from "../../Types/Types";
 const SignupForm: React.FC<SignUpForm> = ({ currentPage, setCurrentPage, FormTitle }) => {
@@ -51,7 +51,7 @@ const SignupForm: React.FC<SignUpForm> = ({ currentPage, setCurrentPage, FormTit
         toast.error("Already Signed In");
       } else {
         set(values);
-        toast.success("Sign Up success");
+        toast.success("SignUp success");
         navigate("/login");
       }
     } else {

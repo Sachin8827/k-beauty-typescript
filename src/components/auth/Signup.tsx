@@ -1,4 +1,4 @@
-import { InputField } from "./../Common/FormInputGroup";
+import { InputField } from "../common/FormInputGroup";
 import * as React from "react";
 import "../../assets/styles/Signup.css";
 

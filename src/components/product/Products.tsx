@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Rating from "../Common/Rating";
+import Rating from "../common/Rating";
 import "../../assets/styles/Products.css";
 import { ProductProp } from "../../Types/Types";
 
@@ -25,7 +25,7 @@ const Products: React.FC<ProductProp> = ({ data: products, heading }) => {
                       <div className='star'>
                         <Rating value={product.star} />
                       </div>
-                      <p className='price'> $ {product.price}</p>
+                      <p className='price'> $ {product.price.toFixed(2)}</p>
                     </div>
                   </div>
                 </Link>

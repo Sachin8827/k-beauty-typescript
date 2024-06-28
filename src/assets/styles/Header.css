@@ -22,12 +22,11 @@ h5 {
   width: 100%;
   top: 0;
   z-index: 1;
-  /* background-color: var(--); */
 }
 .container {
+  width: 90%;
   margin: 0 auto;
-  --c-w: 1320px;
-  max-width: var(--c-w);
+  height: fit-content;
 }
 
 .heading {
@@ -95,7 +94,7 @@ h5 {
   color: #ff9966;
 }
 button {
-  width: 11rem;
+  width: 100%;
   border: none;
   color: white;
   cursor: pointer;

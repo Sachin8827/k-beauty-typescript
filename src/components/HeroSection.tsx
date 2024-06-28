@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
+import banner2 from '../../public/images/HeroImage.webp'
 import { Link } from "react-router-dom";
-
 import banner from "/images/Banner.jpeg";
 import data from "../utils/constants/data";
 import { Product } from "../Types/Types";
 import "../assets/styles/Hero.css";
-import useDebounce from "../CustomHooks/useDebounce";
+import useDebounce from "../customHooks/useDebounce";
 const HeroSection: React.FC<{ inputFieldStatus: boolean }> = ({ inputFieldStatus }) => {
   const [searchBarStatus, setSearchBarStatus] = useState(false);
   const [filteredProduct, setFilteredProduct] = useState<Product[]>([]);
@@ -29,7 +29,7 @@ const HeroSection: React.FC<{ inputFieldStatus: boolean }> = ({ inputFieldStatus
       <section>
         <div className='hero-image'>
           <img src={banner} alt='' />
-
+          <img src={banner2} alt='' />
           <div className='gradient'>
             <div className="innerGradient">
 

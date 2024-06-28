@@ -1,5 +1,7 @@
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { calculatePrice } from "../components/Common/CommanFunctions";
+import { calculatePrice } from "./common/CommanFunctions";
+import { RootState } from "../Redux/Store";
 import { SummaryProp } from "../Types/Types";
 import RenderBuyNow from "./BuyNow";
 import RenderCart from "./RenderCart";
@@ -10,6 +12,7 @@ const Summary: React.FC<SummaryProp> = ({ user, buyNowProduct }) => {
       : calculatePrice(user.cart || []);
   const deliveryPrice = 0.0;
   const navigate = useNavigate();
+  const { user: currrentUser } = useSelector((state: RootState) => state.user)
   return (
     <>
       <section className='order'>
@@ -42,12 +45,13 @@ const Summary: React.FC<SummaryProp> = ({ user, buyNowProduct }) => {
                   {typeof buyNowProduct == "object" ? (
                     <RenderBuyNow item={buyNowProduct} />
                   ) : (
-                    <RenderCart cart={user.cart || []} />
+                    <RenderCart cart={currrentUser.cart || []} />
+
                   )}
                 </div>
               </div>
             </div>
-
+            {console.log(currrentUser.cart)}
             <div className='order-summary'>
               <h5>Order Summary</h5>
               <div className='breakdown'>
